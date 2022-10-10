@@ -39,27 +39,29 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>
+                            </div>
+
+                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click">Inicio</asp:LinkButton>
+                         
+                            <div class="navbar-collapse collapse">
+
+                                <asp:Menu ID="menu" class="navbar-brand" Style="" Orientation="Horizontal" runat="server">
+                                                           
+                                </asp:Menu> 
+
+                            </div> 
+                      </div>
+       
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Tema 1</a></li>
-                        <li><a runat="server" href="~/Contact">Tema 2</a></li>
-                        <li><a runat="server" href="~/About">Tema 3</a></li>
-                        <li><a runat="server" href="~/Contact">Tema 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

@@ -11,34 +11,48 @@ namespace AgendaPrueba
 {
 
 
-    public partial class SiteMaster
+    public partial class Tema
     {
 
         /// <summary>
-        /// Control anterior.
+        /// Control panelPDF.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink anterior;
+        protected global::System.Web.UI.WebControls.Panel panelPDF;
 
         /// <summary>
-        /// Control siguiente.
+        /// Control iFramePdf.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink siguiente;
+        protected global::System.Web.UI.HtmlControls.HtmlIframe iFramePdf;
 
         /// <summary>
-        /// Control MainContent.
+        /// Control yourIframe.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.HtmlControls.HtmlIframe yourIframe;
+
+        /// <summary>
+        /// Propiedad Master.
+        /// </summary>
+        /// <remarks>
+        /// Propiedad generada automáticamente.
+        /// </remarks>
+        public new AgendaPrueba.SiteMaster Master
+        {
+            get
+            {
+                return ((AgendaPrueba.SiteMaster)(base.Master));
+            }
+        }
     }
 }

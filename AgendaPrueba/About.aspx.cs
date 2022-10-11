@@ -11,8 +11,17 @@ namespace AgendaPrueba
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            yourIframe.Attributes.Add("src", "~/files/texto_alternativo4.pdf");
-            yourIframe.DataBind();
+          
+        }
+
+        protected void Regresar_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void Siguiente_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

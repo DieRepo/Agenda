@@ -38,8 +38,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
-  <div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
                         <div class="container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -49,16 +48,9 @@
                                 </button>
                                 <a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>
                             </div>
-
-                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click">Inicio</asp:LinkButton>
-                         
-                            <div class="navbar-collapse collapse">
-
-                                <asp:Menu ID="menu" class="navbar-brand" Style="" Orientation="Horizontal" runat="server">
-                                                           
-                                </asp:Menu> 
-
-                            </div> 
+                             <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click">Inicio</asp:LinkButton>
+                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click"> REPRODUCIR TODO</asp:LinkButton>
+                                                                             
                       </div>
        
                 </div>

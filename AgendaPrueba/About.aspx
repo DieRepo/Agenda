@@ -2,14 +2,26 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
-    <h3>Your application description page.</h3>
-    <p>Use this area to provide additional information.</p>
-        
-            <asp:Panel runat="server" ID="panelPDF" Visible="true">
-                <asp:HtmlIframe ID="iFramePdf" ClientIDMode = "Static"  name="iFramePdf" src=""  Visible="false" runat="server"  style="width: 100%; height: 400px;"></asp:HtmlIframe>
-
-                <asp:HtmlIframe ID="yourIframe" ClientIDMode = "Static" runat="server" src="" style="width: 100%; height: 400px;"/>
+    
+          <asp:Panel runat="server" ID="panelimg" Visible="true">
+               
+               <asp:Image ID="imgraficas" runat="server" ClientIDMode="Static" ImageUrl="~/files/grafica_barras.png" GenerateEmptyAlternateText="true" AlternateText="Numero Asuntos Iniciados por Delito Feminicidio Año y Distrito"></asp:Image>
 
             </asp:Panel>
+
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="col-md-1">
+                <asp:Button runat="server" CssClass="btn btn-danger" OnClick="Regresar_Click" Text="Anterior" ID="btnanterior" />
+            </div>
+            <div class="col-lg-10">
+              
+            </div>
+            <div class="col-lg-1">
+                <asp:Button runat="server" CssClass="btn btn-primary" OnClick="Siguiente_Click" Text="Siguiente" ID="btnsiguiente" />
+            </div>
+
+        </div>
+    </div>
 
 </asp:Content>

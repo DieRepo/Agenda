@@ -46,7 +46,7 @@ namespace AgendaPrueba
                     location = resultado["localizacion"].ToString();
                    
                     menu.Items.Add(new MenuItem(resultado["nom_menu"].ToString(),
-                        resultado["idmenu"].ToString(), "", location));
+                        resultado["idmenu"].ToString(), "", location +"?id="+idMenu));
 
                     menu.FindItem(resultado["idmenu"].ToString());
                     listaPaginas.Add(location);

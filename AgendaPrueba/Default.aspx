@@ -9,13 +9,10 @@
     </div>
                       <div class="container">
                                                  
-                              
-                          
-                          <asp:Menu ID="menu" Orientation="Vertical" CssClass="navbar" runat="server" RenderingMode="List" SkipLinkText="">
+                            <asp:Menu ID="menu" Orientation="Vertical" CssClass="navbar" runat="server" RenderingMode="List" SkipLinkText="">
                                                            
                                 </asp:Menu> 
-
-                         
+                      
                       </div>      
 
 </asp:Content>

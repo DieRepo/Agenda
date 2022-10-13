@@ -15,7 +15,11 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <style>
+        .static > a {
+            color: black!important;
+        }
+    </style>
 </head>
 <body>
     <form runat="server">

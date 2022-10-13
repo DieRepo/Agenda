@@ -7,29 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AgendaPrueba {
-    
-    
-    public partial class SiteMaster {
-        
-        /// <summary>
-        /// Control anterior.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink anterior;
-        
-        /// <summary>
-        /// Control siguiente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink siguiente;
-        
+namespace AgendaPrueba
+{
+
+
+    public partial class SiteMaster
+    {
+
         /// <summary>
         /// Control MainContent.
         /// </summary>

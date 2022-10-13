@@ -7,19 +7,18 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AgendaPrueba
-{
-
-
-    public partial class _Default
-    {
-         /// <summary>
+namespace AgendaPrueba {
+    
+    
+    public partial class _Default {
+        
+        /// <summary>
         /// Control menu.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-         protected global::System.Web.UI.WebControls.Menu menu;
+        protected global::System.Web.UI.WebControls.Menu menu;
     }
 }

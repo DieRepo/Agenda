@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+    <title><%: Page.Title %> Audio Agenda</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -38,7 +38,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-fixed-top" style="background-color: #c80000;width: 100%;height: 60px;">
                         <div class="container">
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,10 +46,10 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>
+                                <%--<a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>--%>
                             </div>
-                             <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click">Inicio</asp:LinkButton>
-                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click"> REPRODUCIR TODO</asp:LinkButton>
+                             <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click" style="color: #ffffff">Inicio</asp:LinkButton>
+                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click" style="color: #ffffff"> Reproducir Todo</asp:LinkButton>
                                                                              
                       </div>
        
@@ -58,9 +58,9 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            <footer>
+            <%--<footer>
                 <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+            </footer>--%>
         </div>
 
     </form>

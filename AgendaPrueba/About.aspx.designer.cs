@@ -7,38 +7,54 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AgendaPrueba
-{
-
-
-    public partial class About
-    {
-
+namespace AgendaPrueba {
+    
+    
+    public partial class About {
+        
         /// <summary>
-        /// Control panelPDF.
+        /// Control panelimg.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel panelPDF;
-
+        protected global::System.Web.UI.WebControls.Panel panelimg;
+        
         /// <summary>
-        /// Control iFramePdf.
+        /// Control imgraficas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe iFramePdf;
-
+        protected global::System.Web.UI.WebControls.Image imgraficas;
+        
         /// <summary>
-        /// Control yourIframe.
+        /// Control Image1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe yourIframe;
+        protected global::System.Web.UI.WebControls.Image Image1;
+        
+        /// <summary>
+        /// Control btnanterior.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnanterior;
+        
+        /// <summary>
+        /// Control btnsiguiente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnsiguiente;
     }
 }

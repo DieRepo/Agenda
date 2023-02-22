@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AgendaPrueba
-{
-
-
-    public partial class Tema
-    {
-
+namespace AgendaPrueba {
+    
+    
+    public partial class Tema {
+        
         /// <summary>
         /// Control panelPDF.
         /// </summary>
@@ -22,35 +20,24 @@ namespace AgendaPrueba
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel panelPDF;
-
+        
         /// <summary>
-        /// Control iFramePdf.
+        /// Control orgPrimeIns.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe iFramePdf;
-
-        /// <summary>
-        /// Control yourIframe.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe yourIframe;
-
+        protected global::System.Web.UI.WebControls.Image orgPrimeIns;
+        
         /// <summary>
         /// Propiedad Master.
         /// </summary>
         /// <remarks>
         /// Propiedad generada automáticamente.
         /// </remarks>
-        public new AgendaPrueba.SiteMaster Master
-        {
-            get
-            {
+        public new AgendaPrueba.SiteMaster Master {
+            get {
                 return ((AgendaPrueba.SiteMaster)(base.Master));
             }
         }

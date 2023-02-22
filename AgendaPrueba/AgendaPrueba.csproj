@@ -119,6 +119,8 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="files\grafica_barras.png" />
+    <Content Include="files\OrgajuriPrimeIns.png" />
+    <Content Include="files\OrgJuriPrimeInstSisTra.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -135,6 +137,7 @@
     <Content Include="files\prueba_text_alternativo2.pdf" />
     <Content Include="files\TEMA_3.pdf" />
     <Content Include="files\texto_alternativo4.pdf" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

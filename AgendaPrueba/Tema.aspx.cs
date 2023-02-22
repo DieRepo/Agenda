@@ -54,6 +54,7 @@ namespace AgendaPrueba
                     idlocalizacion = Convert.ToInt32(resultado["id"]);
                     url_pdf = Convert.ToString(resultado["url_pdf"]);
                     location = resultado["localizacion"].ToString();
+                    
 
                 }
 
@@ -79,11 +80,12 @@ namespace AgendaPrueba
                     enlaceAnterior.Visible = true;
                     enlaceSiguiente.Visible = true;
                 }
-                enlaceAnterior.NavigateUrl = "~/Tema?id=" + (Convert.ToInt32(idPagina) - 1);
-                enlaceSiguiente.NavigateUrl = "~/Tema?id=" + (Convert.ToInt32(idPagina) + 1);
+                enlaceAnterior.NavigateUrl = "~/"+location+"?id=" + (Convert.ToInt32(idPagina) - 1);
+                enlaceSiguiente.NavigateUrl = "~/Tema.aspx?id=" + (Convert.ToInt32(idPagina) + 1);
 
-                yourIframe.Attributes.Add("src", "~/" +  url_pdf);
-                yourIframe.DataBind();
+                orgPrimeIns.Attributes.Add("src", "../" +  url_pdf);
+                orgPrimeInsTra.Attributes.Add("src", "../" + url_pdf);
+                //orgPrimeIns.DataBind();
 
             }
             catch (Exception ex)

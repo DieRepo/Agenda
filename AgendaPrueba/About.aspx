@@ -7,6 +7,12 @@
                
                <asp:Image ID="imgraficas" runat="server" ClientIDMode="Static" ImageUrl="~/files/grafica_barras.png" GenerateEmptyAlternateText="true" AlternateText="Numero Asuntos Iniciados por Delito Feminicidio Año y Distrito"></asp:Image>
 
+
+              <h2>Prueba</h2>
+              <asp:Image ID="Image1" runat="server" ClientIDMode="Static" ImageUrl="~/files/grafica_barras.png" GenerateEmptyAlternateText="true" AlternateText="Numero Asuntos terminados por Feminicidio Año y Distrito"></asp:Image>
+
+
+
             </asp:Panel>
 
         <div class="row">

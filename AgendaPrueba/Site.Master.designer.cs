@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AgendaPrueba
-{
-
-
-    public partial class SiteMaster
-    {
-
+namespace AgendaPrueba {
+    
+    
+    public partial class SiteMaster {
+        
         /// <summary>
         /// Control MainContent.
         /// </summary>

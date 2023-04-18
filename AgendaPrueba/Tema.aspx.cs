@@ -39,6 +39,7 @@ namespace AgendaPrueba
             MySqlConnection con = null;
             List<String> listaPaginas = null;
             String url_pdf = "";
+            String desc = "";
 
             try
             {
@@ -53,6 +54,7 @@ namespace AgendaPrueba
                 {
                     idlocalizacion = Convert.ToInt32(resultado["id"]);
                     url_pdf = Convert.ToString(resultado["url_pdf"]);
+                    desc = Convert.ToString(resultado["descripcion"]);
                     location = resultado["localizacion"].ToString();
                     
 
@@ -84,7 +86,9 @@ namespace AgendaPrueba
                 enlaceSiguiente.NavigateUrl = "~/Tema.aspx?id=" + (Convert.ToInt32(idPagina) + 1);
 
                 orgPrimeIns.Attributes.Add("src", "../" +  url_pdf);
-                orgPrimeInsTra.Attributes.Add("src", "../" + url_pdf);
+                orgPrimeIns.Attributes.Add("AlternateText",desc);
+                texto.Text = "Descripcion de la grafica: " + desc;
+
                 //orgPrimeIns.DataBind();
 
             }

@@ -42,6 +42,7 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <%--<div><asp:Image runat="server" style="width: 100%;"  src="../files/AudioAgenda.jpg"/></div>--%>
 <div class="navbar navbar-fixed-top" style="background-color: #c80000;width: 100%;height: 60px;">
                         <div class="container">
                             <div class="navbar-header">
@@ -53,7 +54,8 @@
                                 <%--<a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>--%>
                             </div>
                              <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click" style="color: #ffffff">Inicio</asp:LinkButton>
-                            <asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click" style="color: #ffffff"> Reproducir Todo</asp:LinkButton>
+                            <%--<asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click" style="color: #ffffff"> Reproducir Todo</asp:LinkButton>--%>
+                            <a runat="server" class="navbar-brand" href="~/Download/pdfAudioagenda.pdf" style="color:white;text-decoration:none;" download="pdfAudioagenda.pdf">Descargar PDF</a>
                                                                              
                       </div>
        

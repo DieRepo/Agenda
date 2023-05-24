@@ -4,6 +4,9 @@
 
 <html lang="es">
 <head runat="server">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,7 +14,64 @@
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
+
     </asp:PlaceHolder>
+    <script>
+
+        $(function () {
+
+                               $('#navigation a').stop().animate({ 'marginLeft': '-85px' }, 1000);
+
+                               $('#navigation > li').hover(
+                                   function () {
+                                       $('a', $(this)).stop().animate({ 'marginLeft': '-2px' }, 200);
+                                   },
+                                   function () {
+                                       $('a', $(this)).stop().animate({ 'marginLeft': '-85px' }, 200);
+                                   }
+                               );
+                           
+
+        $("#contraste").click(function () {
+            //alert();
+                               if ($("#contenido").hasClass("blanco-negro")) {
+                                   $('#contenido').removeClass('blanco-negro');
+                               } else {
+                                   $('#contenido').addClass('blanco-negro');
+                               }
+
+                           });
+
+                           var currFFZoom = 1;
+                           var currIEZoom = 100;
+
+
+            $('#ampliar').on('click', function () {                               
+                               if ($.browser.mozilla) {
+                                   var step = 0.02;
+                                   currFFZoom += step;
+                                   $('#contenido').css('MozTransform', 'scale(' + currFFZoom + ')');
+                               } else {
+                                   var step = 2;
+                                   currIEZoom += step;
+                                   $('#contenido').css('zoom', ' ' + currIEZoom + '%');
+                               }
+                           });
+
+                           $('#reducir').on('click', function () {
+                               if ($.browser.mozilla) {
+                                   var step = 0.02;
+                                   currFFZoom -= step;
+                                   $('#contenido').css('MozTransform', 'scale(' + currFFZoom + ')');
+
+                               } else {
+                                   var step = 2;
+                                   currIEZoom -= step;
+                                   $('#contenido').css('zoom', ' ' + currIEZoom + '%');
+                               }
+            });
+            });
+    </script>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -19,6 +79,34 @@
         .static > a {
             color: black!important;
         }
+        .blanco-negro {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+          }
+          ul#navigation {
+              position: fixed;margin: 0px;padding: 0px;top: 10px;left: 0px;list-style: none;z-index: 9999;
+          }
+          ul#navigation li {width:100px;}
+
+          ul#navigation li a {display: block;margin-left: -85px;width: 100px;height: 70px;background-color: #aaa;background-repeat: no-repeat;background-position: center center;border: 1px solid #AFAFAF;}
+
+          ul#navigation li a {display: block;margin-left: -85px;width: 100px;height: 70px;background-color: #aaa;background-repeat: no-repeat;background-position: center center;border: 1px solid #AFAFAF;-moz-border-radius: 0px 10px 10px 0px;-webkit-border-bottom-right-radius: 10px;-webkit-border-top-right-radius: 10px;-khtml-border-bottom-right-radius: 10px;-khtml-border-top-right-radius: 10px;opacity: 0.6;filter: progid:DXImageTransform.Microsoft.Alpha(opacity=60);}
+    
+          ul#navigation .home a {background-image: url(img/home.svg);}
+
+          ul#navigation .ampliar a {background-image: url(img/zoom_in_magnifier.svg);}
+
+          ul#navigation .reducir a {background-image: url(img/zoom_out_magnifier.svg);}
+          ul#navigation .contraste a {background-image:url(img/promotion.svg);}
+          ul#navigation .Encuesta a {background-image:url(img/encuesta.svg);background-size: 60px 60px;}
+          ul#navigation .Manual a {background-image:url(img/manual.png);background-size: 60px 60px;}
+
+         
+          ul#navigation .rssfeed a {background-image: url(../images/rss.png);}
+
+          ul#navigation .photos a {background-image: url(../images/camera.png);}
+
+          ul#navigation .contact a {background-image: url(../images/mail.png);}
     </style>
 </head>
 <body>
@@ -53,13 +141,75 @@
                                 </button>
                                 <%--<a class="navbar-brand" runat="server" href="~/">Prueba audioagenda</a>--%>
                             </div>
+
+                            <div class="navbar-collapse collapse">
                              <asp:LinkButton runat="server" class="navbar-brand" OnClick="Inicio_Click" style="color: #ffffff">Inicio</asp:LinkButton>
                             <%--<asp:LinkButton runat="server" class="navbar-brand" OnClick="Rep_Todo_Click" style="color: #ffffff"> Reproducir Todo</asp:LinkButton>--%>
-                            <a runat="server" class="navbar-brand" href="~/Download/pdfAudioagenda.pdf" style="color:white;text-decoration:none;" download="pdfAudioagenda.pdf">Descargar PDF</a>
+                            <a runat="server" class="navbar-brand" href="~/Download/pdfAudioagenda.pdf" style="color:white;text-decoration:none;" download="pdfAudioagenda.pdf">Descargar PDF</a></div>
                                                                              
                       </div>
+                <div>
+                <ul id="navigation">
+                           <li class="home"><a title="INICIO" href="../../../Default.aspx"></a></li>
+                           <li class="ampliar" id="ampliar" href=""><a title="ampliar"></a></li>
+                           <li class="reducir" id="reducir" href=""><a title="reducir"></a></li>
+                           <li class="contraste" id="contraste" ><a title="contraste"></a></li>
+                           <%--<li runat="server" class="Encuesta" id="Encuesta" href=""><a title="Encuesta" data-bs-toggle="modal" data-bs-target="#exampleModal"></a></li>--%>
+                           <li class="Encuesta" id="Encuesta"><a title="Encuesta" data-toggle="modal" data-target="#exampleModal"></a></li>
+                           <li runat="server" href="#" class="Manual" id="Manual"><a runat="server" title="Manual" href="~/Download/pdfAudioagenda.pdf" download="PDF Audio Agenda"></a></li>
+                           
+                       </ul></div>
        
                 </div>
+        <!-- Modal Encuesta de Satisfacción -->
+                       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                           <div class="modal-dialog">
+                               <div class="modal-content">
+                                   <div class="modal-header">
+                                       <h5 class="modal-title" id="exampleModalLabel">Encuesta de Satisfacción</h5>
+                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                   </div>
+                                   <div class="modal-body">
+                                       <div id="encuestaSatisfaccion" class="">
+
+                                           <div class="form-check form-check-inline">
+
+                                               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                                               <label class="form-check-label" for="inlineRadio3"><i class="fas fa-smile-wink fa-2x" style="color:#518a7f;"></i> BUENO</label>
+
+                                           </div>
+                                           <div class="form-check form-check-inline">
+
+                                               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                                               <label class="form-check-label" for="inlineRadio1"><i class="fas fa-angry fa-2x" style="color:#7e161e;"></i> MALO</label>
+
+                                           </div>
+                                           <div class="form-check form-check-inline">
+
+                                               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3">
+                                               <label class="form-check-label" for="inlineRadio2"><i class="fas fa-meh fa-2x" style="color:#dc9652;"></i> REGULAR</label>
+
+                                           </div>
+                                           <div class="input-group">
+
+                                               <div class="input-group-prepend">
+
+                                                   <span class="input-group-text">Deja tu comentario</span>
+
+                                               </div>
+                                               <textarea class="form-control" aria-label="Comentario:" id="comentarios"></textarea>
+
+                                           </div>
+
+                                       </div>
+                                   </div>
+                                   <div class="modal-footer">
+                                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                       <button type="button" class="btn btn-primary" data-dismiss="modal" id="enviar_encuesta" onclick="EnviaEncuesta()">Enviar</button>
+                                   </div>
+                               </div>
+                           </div></div>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>

@@ -85,7 +85,8 @@ namespace AgendaPrueba
                 enlaceAnterior.NavigateUrl = "~/"+location+"?id=" + (Convert.ToInt32(idPagina) - 1);
                 enlaceSiguiente.NavigateUrl = "~/Tema.aspx?id=" + (Convert.ToInt32(idPagina) + 1);
 
-                orgPrimeIns.Attributes.Add("src", "../" +  url_pdf);
+                orgPrimeIns.Attributes.Add("src", "" +  url_pdf);
+                //orgPrimeIns.Attributes.Add("src", "../" + url_pdf);
                 orgPrimeIns.Attributes.Add("AlternateText",desc);
                 texto.Text = "Descripcion de la grafica: " + desc;
 
